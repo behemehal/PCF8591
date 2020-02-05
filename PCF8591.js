@@ -31,7 +31,7 @@ exports.connect = (i2c, options) => {
         };
         var potential_ = voltagePotential(last, vals, 6);
         last = potential_;
-        return potential;
+        return potential_;
     }
     return {
         readMode: () => readAnalogPCF8591(opt.adress, 0x04)
