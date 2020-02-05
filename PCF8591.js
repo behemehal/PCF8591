@@ -19,7 +19,7 @@ exports.connect = (i2c, options) => {
             };
         }
     };
-
+    var last = null;
     function readAnalogPCF8591(ad, reg) {
         i2c.writeTo(ad, reg);
         var buffer = i2c.readFrom(ad, 4);
