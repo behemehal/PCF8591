@@ -8,7 +8,7 @@ exports.connect = (i2c, options) => {
     };
 
     var voltagePotential = (old, newv, range) => {
-        if (old!==null) {
+        if (old==null) {
             return newv;
         } else {
             return {
