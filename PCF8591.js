@@ -8,7 +8,7 @@ exports.connect = (i2c, options) => {
     };
 
     var voltagePotential = (old, newv, range) => {
-        if (old[0]) {
+        if (old!==null) {
             return newv;
         } else {
             return {
@@ -30,7 +30,7 @@ exports.connect = (i2c, options) => {
             3: parseInt(buffer[0].toString(16), 16)
         };
         var potential_ = voltagePotential(last, vals, 6);
-        var last = potential_;
+        last = potential_;
         return potential;
     }
     return {
